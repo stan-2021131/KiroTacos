@@ -6,6 +6,7 @@
   <title>Contacto - KiroTacos</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
 
@@ -24,10 +25,72 @@
     </div>
   </nav>
 
-  <main>
-    <!-- contenido contacto -->
+  <main class="contact-main">
+
+    <header class="contact-header">
+      <h1>Contáctanos</h1>
+      <p>Estamos para servirte</p>
+    </header>
+
+    <div class="contact-grid">
+
+      <section class="contact-info">
+        <div class="info-item">
+          <span class="info-icon">📞</span>
+          <div>
+            <h3>Teléfono</h3>
+            <a href="tel:+50212345678">+502 1234-5678</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">📍</span>
+          <div>
+            <h3>Dirección</h3>
+            <p>6a Avenida 12-34, Zona 1<br>Ciudad de Guatemala</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">🕐</span>
+          <div>
+            <h3>Horario</h3>
+            <p>Lunes a Viernes: 11:00 – 22:00<br>
+               Sábado y Domingo: 10:00 – 23:00</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">🌐</span>
+          <div>
+            <h3>Redes sociales</h3>
+            <div class="social-links">
+              <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://wa.me/50212345678" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-map">
+        <iframe
+          title="Ubicación KiroTacos"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15446.197!2d-90.5133!3d14.6349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a1a8b8b8b8b8%3A0x0!2sZona+1%2C+Ciudad+de+Guatemala!5e0!3m2!1ses!2sgt!4v1"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </section>
+
+    </div>
   </main>
 
+  <footer>
+    <p>© 2026 KiroTacos · Guatemala</p>
+  </footer>
+
+  <script src="js/search.js"></script>
   <script>
     const toggle = document.querySelector('.nav-toggle');
     const navList = document.querySelector('nav ul');
