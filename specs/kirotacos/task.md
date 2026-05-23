@@ -5,5 +5,5 @@
 - [x] Crear página de menú
 - [x] Crear cards de productos
 - [x] Implementar buscador
-- [ ] Crear página de contacto
-- [ ] Agregar responsive design
+- [x] Crear página de contacto
+- [x] Agregar responsive design

@@ -90,14 +90,6 @@
   border-radius: 8px;
 }
 
-footer {
-  text-align: center;
-  padding: 1.2rem;
-  background-color: var(--color-dark);
-  color: #aaa;
-  font-size: 0.85rem;
-}
-
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
