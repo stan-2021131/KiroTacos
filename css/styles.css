@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #c0392b;
+  --color-dark: #1a1a1a;
+  --color-light: #fff;
+  --color-gray: #f4f4f4;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--color-dark);
+}

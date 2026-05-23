@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú - KiroTacos</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-brand">🌮 KiroTacos</a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menú</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+    <div class="nav-search">
+      <input type="search" id="search-input" placeholder="Buscar producto...">
+    </div>
+  </nav>
+
+  <main>
+    <!-- contenido menú -->
+  </main>
+
+  <script src="js/products.js"></script>
+  <script src="js/search.js"></script>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('nav ul');
+    toggle.addEventListener('click', () => {
+      const open = navList.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>
