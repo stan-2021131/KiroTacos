@@ -25,9 +25,20 @@
     </div>
   </nav>
 
-  <main>
-    <!-- contenido menú -->
+  <main class="menu-main">
+    <header class="menu-header">
+      <h1>Nuestro Menú</h1>
+      <p>Todos nuestros tacos preparados con ingredientes frescos</p>
+    </header>
+
+    <div class="menu-grid" id="menu-grid">
+      <!-- generado por JS -->
+    </div>
   </main>
+
+  <footer>
+    <p>© 2026 KiroTacos · Guatemala</p>
+  </footer>
 
   <script src="js/products.js"></script>
   <script src="js/search.js"></script>
@@ -38,6 +49,8 @@
       const open = navList.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open);
     });
+
+    renderCards(products, 'menu-grid');
   </script>
 </body>
 </html>

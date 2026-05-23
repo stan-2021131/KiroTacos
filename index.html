@@ -75,19 +75,7 @@
       toggle.setAttribute('aria-expanded', open);
     });
 
-    // Renderizar destacados
-    const grid = document.getElementById('featured-grid');
-    const destacados = products.filter(p => p.destacado);
-    grid.innerHTML = destacados.map(p => `
-      <article class="product-card">
-        <img src="${p.imagen}" alt="${p.nombre}">
-        <div class="card-body">
-          <h3>${p.nombre}</h3>
-          <p class="ingredients">${p.ingredientes.join(', ')}</p>
-          <span class="price">Q${p.precio.toFixed(2)}</span>
-        </div>
-      </article>
-    `).join('');
+    renderCards(products.filter(p => p.destacado), 'featured-grid');
   </script>
 </body>
 </html>
