@@ -1,9 +1,9 @@
-- [ ] Crear estructura inicial del proyecto
-- [ ] Crear navbar reutilizable
-- [ ] Crear página Home
-- [ ] Implementar carrusel
-- [ ] Crear página de menú
-- [ ] Crear cards de productos
-- [ ] Implementar buscador
+- [x] Crear estructura inicial del proyecto
+- [x] Crear navbar reutilizable
+- [x] Crear página Home
+- [x] Implementar carrusel
+- [x] Crear página de menú
+- [x] Crear cards de productos
+- [x] Implementar buscador
 - [ ] Crear página de contacto
 - [ ] Agregar responsive design
