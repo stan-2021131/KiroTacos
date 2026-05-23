@@ -6,6 +6,7 @@
   <title>KiroTacos</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
@@ -25,9 +26,46 @@
   </nav>
 
   <main>
-    <!-- contenido home -->
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Los mejores tacos de Guatemala</h1>
+        <p>Sabor auténtico, ingredientes frescos, directo a tu mesa.</p>
+        <a href="menu.html" class="btn-primary">Ver menú</a>
+      </div>
+    </section>
+
+    <!-- Carrusel -->
+    <section class="carousel-section">
+      <div class="carousel" aria-label="Galería de tacos">
+        <div class="carousel-track">
+          <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=1200&q=80" alt="Tacos al pastor">
+          <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=1200&q=80" alt="Tacos de carne">
+          <img src="https://images.unsplash.com/photo-1624300629298-e9de39c13be5?w=1200&q=80" alt="Tacos variados">
+        </div>
+        <button class="carousel-btn prev" aria-label="Anterior">&#8249;</button>
+        <button class="carousel-btn next" aria-label="Siguiente">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </section>
+
+    <!-- Productos destacados -->
+    <section class="featured">
+      <h2>Destacados</h2>
+      <div class="featured-grid" id="featured-grid">
+        <!-- generado por JS -->
+      </div>
+    </section>
+
   </main>
 
+  <footer>
+    <p>© 2026 KiroTacos · Guatemala</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/carousel.js"></script>
   <script src="js/search.js"></script>
   <script>
     const toggle = document.querySelector('.nav-toggle');
@@ -36,6 +74,20 @@
       const open = navList.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open);
     });
+
+    // Renderizar destacados
+    const grid = document.getElementById('featured-grid');
+    const destacados = products.filter(p => p.destacado);
+    grid.innerHTML = destacados.map(p => `
+      <article class="product-card">
+        <img src="${p.imagen}" alt="${p.nombre}">
+        <div class="card-body">
+          <h3>${p.nombre}</h3>
+          <p class="ingredients">${p.ingredientes.join(', ')}</p>
+          <span class="price">Q${p.precio.toFixed(2)}</span>
+        </div>
+      </article>
+    `).join('');
   </script>
 </body>
 </html>
